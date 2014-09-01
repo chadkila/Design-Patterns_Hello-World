@@ -10,12 +10,12 @@ package main.Creational.AbstractFactory;
 public class HelloSubject implements Subject {
 
 	private String str;
-	
+
 	public HelloSubject(String str) {
 		this.str = str;
 	}
 
-	public String getStr() {
+	public String hellWorld() {
 		return str;
 	}
 
