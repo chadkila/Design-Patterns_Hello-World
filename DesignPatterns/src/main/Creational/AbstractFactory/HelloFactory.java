@@ -10,7 +10,7 @@ package main.Creational.AbstractFactory;
 public class HelloFactory implements AbstractFactory{
 
 	public Subject createSubject() {
-		return new HelloSubject("Hello World!");
+		return new HelloSubject("Hello Abstract Factory!");
 	}
 
 }
