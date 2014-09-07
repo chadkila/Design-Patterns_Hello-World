@@ -1,6 +1,3 @@
-/**
- * 
- */
 package main.Creational.AbstractFactory;
 
 /**
