@@ -11,7 +11,7 @@ import main.HelloWorld;
  */
 public class Product implements HelloWorld {
 
-	private String str;
+	private String str = "";
 
 	public void setString(String s) {
 		this.str = s;
