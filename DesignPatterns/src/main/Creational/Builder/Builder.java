@@ -8,15 +8,11 @@ package main.Creational.Builder;
  * 
  */
 abstract class Builder {
-	protected Product product;
+	protected Product product = new Product();
 
 	public Product getProduct() {
 		return product;
 	}
 
-	public void createProduct() {
-		product = new Product();
-	}
-
-	public abstract void buildProduct();
+	public abstract void buildString();
 }
