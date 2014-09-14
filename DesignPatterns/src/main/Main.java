@@ -1,11 +1,9 @@
-/**
- * 
- */
 package main;
 
 import main.Creational.AbstractFactory.*;
 import main.Creational.Singleton.*;
 import main.Creational.Builder.*;
+import main.Creational.FactoryMethod.*;
 
 /**
  * @author yu
@@ -26,7 +24,11 @@ public class Main {
 		director.constructProduct();
 		System.out.println(director.getProduct().hellWorld());
 
-		System.out.println("3. Singleton: ");
+		System.out.println("3. Factory Method: ");
+		Factory creator = new HelloMFactory();
+		System.out.println(creator.getProduct().hellWorld());
+
+		System.out.println("4. Singleton: ");
 		HelloWorld singleton = HelloSingleton.getInstance();
 		System.out.println(singleton.hellWorld());
 
