@@ -4,6 +4,7 @@ import main.Creational.AbstractFactory.*;
 import main.Creational.Singleton.*;
 import main.Creational.Builder.*;
 import main.Creational.FactoryMethod.*;
+import main.Creational.Prototype.*;
 
 /**
  * @author yu
@@ -28,7 +29,14 @@ public class Main {
 		Factory creator = new HelloMFactory();
 		System.out.println(creator.getProduct().hellWorld());
 
-		System.out.println("4. Singleton: ");
+		System.out.println("4. Prototype: ");
+		PrototypeManager manager = new PrototypeManager();
+		manager.put("hello", new HelloPrototype("Hello Prototype!"));
+		HelloPrototype prototype = (HelloPrototype) manager.get("hello")
+				.clonenew();
+		System.out.println(prototype.helloWorld());
+
+		System.out.println("5. Singleton: ");
 		HelloWorld singleton = HelloSingleton.getInstance();
 		System.out.println(singleton.hellWorld());
 
