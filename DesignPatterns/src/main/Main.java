@@ -5,6 +5,7 @@ import main.Creational.Singleton.*;
 import main.Creational.Builder.*;
 import main.Creational.FactoryMethod.*;
 import main.Creational.Prototype.*;
+import main.Structural.Adapter.*;
 
 /**
  * @author yu
@@ -13,6 +14,7 @@ import main.Creational.Prototype.*;
 public class Main {
 
 	public static void main(String args[]) {
+		System.out.println("===========Creational===========");
 		System.out.println("1. Abstract Factory: ");
 		AbstractFactory factory = new HelloFactory();
 		Subject sub = factory.createSubject();
@@ -40,5 +42,9 @@ public class Main {
 		HelloWorld singleton = HelloSingleton.getInstance();
 		System.out.println(singleton.hellWorld());
 
+		System.out.println("===========Structral============");
+		System.out.println("1. Adapter: ");
+		HelloWorld adapter = new HelloAdapter();
+		System.out.println(adapter.hellWorld());
 	}
 }
