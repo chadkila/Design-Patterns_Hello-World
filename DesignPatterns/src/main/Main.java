@@ -6,7 +6,9 @@ import main.Creational.Builder.*;
 import main.Creational.FactoryMethod.*;
 import main.Creational.Prototype.*;
 import main.Structural.Adapter.*;
+import main.Structural.Bridge.*;
 
+;
 /**
  * @author yu
  * 
@@ -46,5 +48,15 @@ public class Main {
 		System.out.println("1. Adapter: ");
 		HelloWorld adapter = new HelloAdapter();
 		System.out.println(adapter.hellWorld());
+
+		System.out.println("2. Bridge: ");
+		Abstraction absts[] = new Abstraction[] {
+				new HelloAbstraction(new HelloWorldImpl1()),
+				new HelloAbstraction(new HelloWorldImpl2()) };
+		for (Abstraction abst : absts) {
+			abst.helloWorld();
+		}
+		System.out.println();
+
 	}
 }
