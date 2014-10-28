@@ -7,8 +7,8 @@ import main.Creational.FactoryMethod.*;
 import main.Creational.Prototype.*;
 import main.Structural.Adapter.*;
 import main.Structural.Bridge.*;
+import main.Structural.Composite.*;
 
-;
 /**
  * @author yu
  * 
@@ -58,5 +58,10 @@ public class Main {
 		}
 		System.out.println();
 
+		System.out.println("3. Composite: ");
+		HelloComposite root = new HelloComposite();
+		root.add(new HelloLeaf("Hello "));
+		root.add(new HelloLeaf("Composite!"));
+		root.display();
 	}
 }
