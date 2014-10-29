@@ -18,7 +18,7 @@ public class Product implements HelloWorld {
 	}
 
 	@Override
-	public String hellWorld() {
+	public String helloWorld() {
 		return str;
 	}
 
