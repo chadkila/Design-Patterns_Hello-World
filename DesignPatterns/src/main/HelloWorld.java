@@ -7,5 +7,5 @@ package main;
  * 
  */
 public interface HelloWorld {
-	public String hellWorld();
+	public String helloWorld();
 }
