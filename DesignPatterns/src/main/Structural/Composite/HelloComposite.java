@@ -29,13 +29,13 @@ public class HelloComposite implements HelloWorld {
 	}
 
 	@Override
-	public String hellWorld() {
+	public String helloWorld() {
 		return hello;
 	}
 
 	public void display() {
 		for (HelloWorld e : list) {
-			System.out.print(e.hellWorld());
+			System.out.print(e.helloWorld());
 		}
 	}
 
