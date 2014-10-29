@@ -39,7 +39,7 @@ public class HelloSingleton implements HelloWorld {
 	}
 
 	@Override
-	public String hellWorld() {
+	public String helloWorld() {
 		return "Hello Singleton!";
 	}
 }
