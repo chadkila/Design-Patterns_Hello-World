@@ -11,7 +11,7 @@ import main.HelloWorld;
 public class HelloProduct implements HelloWorld {
 
 	@Override
-	public String hellWorld() {
+	public String helloWorld() {
 		return "Hello Factory Method!";
 	}
 
