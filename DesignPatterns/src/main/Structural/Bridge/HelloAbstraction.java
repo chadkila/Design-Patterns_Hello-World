@@ -17,7 +17,7 @@ public class HelloAbstraction extends Abstraction {
 
 	@Override
 	public void helloWorld() {
-		System.out.print(hello.hellWorld());
+		System.out.print(hello.helloWorld());
 	}
 
 }
