@@ -19,7 +19,7 @@ public class HelloLeaf implements HelloWorld {
 	}
 
 	@Override
-	public String hellWorld() {
+	public String helloWorld() {
 		return hello;
 	}
 
