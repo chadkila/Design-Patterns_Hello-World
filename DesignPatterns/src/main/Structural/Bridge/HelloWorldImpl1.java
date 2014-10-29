@@ -12,7 +12,7 @@ import main.HelloWorld;
 public class HelloWorldImpl1 implements HelloWorld {
 
 	@Override
-	public String hellWorld() {
+	public String helloWorld() {
 		return "Hello ";
 	}
 
