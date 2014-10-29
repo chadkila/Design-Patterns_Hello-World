@@ -22,7 +22,7 @@ public class HelloAdapter extends Adaptee implements HelloWorld {
 	}
 
 	@Override
-	public String hellWorld() {
+	public String helloWorld() {
 		if (adaptee != null) {
 			return adaptee.helloWorld();
 		} else {
