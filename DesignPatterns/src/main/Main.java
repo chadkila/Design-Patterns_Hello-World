@@ -8,6 +8,7 @@ import main.Creational.Prototype.*;
 import main.Structural.Adapter.*;
 import main.Structural.Bridge.*;
 import main.Structural.Composite.*;
+import main.Structural.Decorator.*;
 
 /**
  * @author yu
@@ -27,11 +28,11 @@ public class Main {
 		HelloBuilder hello = new HelloBuilder();
 		director.setBuilder(hello);
 		director.constructProduct();
-		System.out.println(director.getProduct().hellWorld());
+		System.out.println(director.getProduct().helloWorld());
 
 		System.out.println("3. Factory Method: ");
 		Factory creator = new HelloMFactory();
-		System.out.println(creator.getProduct().hellWorld());
+		System.out.println(creator.getProduct().helloWorld());
 
 		System.out.println("4. Prototype: ");
 		PrototypeManager manager = new PrototypeManager();
@@ -42,12 +43,12 @@ public class Main {
 
 		System.out.println("5. Singleton: ");
 		HelloWorld singleton = HelloSingleton.getInstance();
-		System.out.println(singleton.hellWorld());
+		System.out.println(singleton.helloWorld());
 
 		System.out.println("===========Structral============");
 		System.out.println("1. Adapter: ");
 		HelloWorld adapter = new HelloAdapter();
-		System.out.println(adapter.hellWorld());
+		System.out.println(adapter.helloWorld());
 
 		System.out.println("2. Bridge: ");
 		Abstraction absts[] = new Abstraction[] {
@@ -61,7 +62,11 @@ public class Main {
 		System.out.println("3. Composite: ");
 		HelloComposite root = new HelloComposite();
 		root.add(new HelloLeaf("Hello "));
-		root.add(new HelloLeaf("Composite!"));
+		root.add(new HelloLeaf("Composite!\n"));
 		root.display();
+
+		System.out.println("4. Decorator: ");
+		HelloWorld decorator = new HelloDecorator(new HelloComponent());
+		System.out.println(decorator.helloWorld());
 	}
 }
