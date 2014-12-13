@@ -9,6 +9,7 @@ import main.Structural.Adapter.*;
 import main.Structural.Bridge.*;
 import main.Structural.Composite.*;
 import main.Structural.Decorator.*;
+import main.Structural.Facade.*;
 
 /**
  * @author yu
@@ -68,5 +69,9 @@ public class Main {
 		System.out.println("4. Decorator: ");
 		HelloWorld decorator = new HelloDecorator(new HelloComponent());
 		System.out.println(decorator.helloWorld());
+
+		System.out.println("5. Facade: ");
+		HelloFacade facade = new HelloFacade();
+		System.out.println(facade.helloWorld());
 	}
 }
