@@ -10,6 +10,7 @@ import main.Structural.Bridge.*;
 import main.Structural.Composite.*;
 import main.Structural.Decorator.*;
 import main.Structural.Facade.*;
+import main.Structural.Flyweight.*;
 
 /**
  * @author yu
@@ -73,5 +74,13 @@ public class Main {
 		System.out.println("5. Facade: ");
 		HelloFacade facade = new HelloFacade();
 		System.out.println(facade.helloWorld());
+
+		System.out.println("6. Flyweight: ");
+		HelloWorld list[] = new HelloWorld[2];
+		HelloFlyweightFactory flyFactory = new HelloFlyweightFactory();
+		list[0] = flyFactory.getFlyweight("Hello");
+		list[1] = flyFactory.getFlyweight("Flyweight!");
+		String flyweight = list[0].helloWorld() + " " + list[1].helloWorld();
+		System.out.println(flyweight);
 	}
 }
