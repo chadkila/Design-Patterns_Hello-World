@@ -11,6 +11,7 @@ import main.Structural.Composite.*;
 import main.Structural.Decorator.*;
 import main.Structural.Facade.*;
 import main.Structural.Flyweight.*;
+import main.Structural.Proxy.*;
 
 /**
  * @author yu
@@ -82,5 +83,9 @@ public class Main {
 		list[1] = flyFactory.getFlyweight("Flyweight!");
 		String flyweight = list[0].helloWorld() + " " + list[1].helloWorld();
 		System.out.println(flyweight);
+
+		System.out.println("7. Proxy: ");
+		HelloWorld proxy = new HelloProxy();
+		System.out.println(proxy.helloWorld());
 	}
 }
