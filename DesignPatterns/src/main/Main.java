@@ -12,6 +12,7 @@ import main.Structural.Decorator.*;
 import main.Structural.Facade.*;
 import main.Structural.Flyweight.*;
 import main.Structural.Proxy.*;
+import main.Behavioral.Chain_of_Responsibility.*;
 
 /**
  * @author yu
@@ -87,5 +88,11 @@ public class Main {
 		System.out.println("7. Proxy: ");
 		HelloWorld proxy = new HelloProxy();
 		System.out.println(proxy.helloWorld());
+
+		System.out.println("===========Behvioral============");
+		System.out.println("1. Chain of Responsibility");
+		Handler helloChain = new HelloHandler1();
+		helloChain.setNext(new HelloHandler2());
+		System.out.println(helloChain.helloWorld());
 	}
 }
